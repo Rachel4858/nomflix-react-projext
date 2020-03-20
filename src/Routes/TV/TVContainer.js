@@ -13,22 +13,23 @@ export default class extends React.Component {
 
   async componentDidMount() {
     try {
-      const topRated = await tvApi.topRated();
-      const popular = await  tvApi.popular();
-      const airingToday = await tvApi.airingToday();
-      console.log(topRated, popular, airingToday);
+      const {data: {results: topRated}} = await tvApi.topRated();
+      const {data: {results: popular}} = await tvApi.popular();
+      const {data: {results: airingToday}} = await tvApi.airingToday();
+      this.setState({topRated, popular, airingToday});
     } catch {
       this.setState({
         error: "Can't find movies information."
       })
     } finally {
-      this.setState({ loading: false });
+      this.setState({loading: false});
     }
   }
 
 
   render() {
     const {topRated, popular, airingToday, error, loading} = this.state;
+    console.log(this.state);
     return (
       <TVPresenter
         topRated={topRated}
