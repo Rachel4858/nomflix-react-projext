@@ -11,7 +11,8 @@ export default class extends React.Component {
     loading: true
   };
 
-  async componentDidMount() {
+  async componentDidMount() { //혹은 arror function형태라면 아래처럼 써도된다.
+    // componentDidMount = async() => {
     try {
       const {data: {results: topRated}} = await tvApi.topRated();
       const {data: {results: popular}} = await tvApi.popular();
@@ -29,7 +30,7 @@ export default class extends React.Component {
 
   render() {
     const {topRated, popular, airingToday, error, loading} = this.state;
-    console.log(this.state);
+    // console.log(this.state)
     return (
       <TVPresenter
         topRated={topRated}

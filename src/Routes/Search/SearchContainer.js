@@ -12,17 +12,26 @@ export default class extends React.Component {
     loading: false
   };
 
-  handleSubmit = () => {
+  handleSubmit = (event) => { // 검색창에 검색 후 엔터를 누르면 searchTerm이 빈칸이 아닌것을 체크 후 search함수 실행
+    event.preventDefault();
     const {searchTerm} = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
     }
   };
 
+  updateTerm = (e) => {
+    const {target: {value}} = e;
+    this.setState({
+      searchTerm:value
+    })
+  };
+
   searchByTerm = async () => {
     const {searchTerm} = this.state;
     this.setState({loading: true});
     try {
+      // throw Massage()
       const {data: {results: movieResults}} = await moviesApi.search(searchTerm);
       const {data: {results: tvResults}} = await tvApi.search(searchTerm);
       this.setState({
@@ -38,6 +47,7 @@ export default class extends React.Component {
 
   render() {
     const {movieResults, tvResults, searchTerm, error, loading} = this.state;
+    // console.log(this.state)
     return (
       <SearchPresenter
         movieResults={movieResults}
@@ -45,7 +55,8 @@ export default class extends React.Component {
         searchTerm={searchTerm}
         error={error}
         loading={loading}
-        hadgleSubmit={this.handleSubmit}
+        handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }

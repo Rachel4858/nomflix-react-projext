@@ -19,7 +19,8 @@
           <Route path="/movie/:id" component={Detail} />
             <Route path="/show/:id" component={Detail} />
             <Redirect from="*" to="/" />
-          </Switch> 
+            {/*이상한주소를 칠시 홈으로 돌아가기*/}
+          </Switch>
           </>
       </Router>
   );
