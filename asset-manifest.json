@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/nomflix-react-projext/static/js/main.e898d98c.chunk.js",
+    "main.js.map": "/nomflix-react-projext/static/js/main.e898d98c.chunk.js.map",
+    "runtime-main.js": "/nomflix-react-projext/static/js/runtime-main.138c0b7c.js",
+    "runtime-main.js.map": "/nomflix-react-projext/static/js/runtime-main.138c0b7c.js.map",
+    "static/js/2.ac06aebe.chunk.js": "/nomflix-react-projext/static/js/2.ac06aebe.chunk.js",
+    "static/js/2.ac06aebe.chunk.js.map": "/nomflix-react-projext/static/js/2.ac06aebe.chunk.js.map",
+    "index.html": "/nomflix-react-projext/index.html",
+    "precache-manifest.db7abc8699bd49bce386e58d704286fb.js": "/nomflix-react-projext/precache-manifest.db7abc8699bd49bce386e58d704286fb.js",
+    "service-worker.js": "/nomflix-react-projext/service-worker.js",
+    "static/js/2.ac06aebe.chunk.js.LICENSE.txt": "/nomflix-react-projext/static/js/2.ac06aebe.chunk.js.LICENSE.txt",
+    "static/media/noPosterSmall.png": "/nomflix-react-projext/static/media/noPosterSmall.21a837eb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.138c0b7c.js",
+    "static/js/2.ac06aebe.chunk.js",
+    "static/js/main.e898d98c.chunk.js"
+  ]
+}
